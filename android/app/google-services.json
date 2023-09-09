@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "419378716427",
+    "project_id": "pskart-14f64",
+    "storage_bucket": "pskart-14f64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419378716427:android:ff3e0444652ca945ea8c0e",
+        "android_client_info": {
+          "package_name": "com.example.pskart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419378716427-mss6v2o3popnejqjkb3qk9hqphg38dnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAREo7y5x1T7O8DvL6O96TT2_o7qLYX7Yw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419378716427-mss6v2o3popnejqjkb3qk9hqphg38dnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
