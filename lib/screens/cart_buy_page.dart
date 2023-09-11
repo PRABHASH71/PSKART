@@ -48,7 +48,7 @@ class _CartBuyProductState extends State<CartBuyProduct> {
                       ),
                     ),
                     Text(
-                      "\$" + "${widget.price}",
+                      "\₹" + "${widget.price}",
                       style: TextStyle(
                         color: Colors.blue,
                         fontSize: 18,

@@ -49,7 +49,7 @@ class _BuyProductState extends State<BuyProduct> {
                       ),
                     ),
                     Text(
-                      "\$" + "${widget.price}",
+                      "\₹" + "${widget.price}",
                       style: TextStyle(
                         color: Colors.blue,
                         fontSize: 18,

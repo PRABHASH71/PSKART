@@ -300,7 +300,7 @@ class _homePageState extends State<homePage> {
                                                             .spaceBetween,
                                                     children: [
                                                       Text(
-                                                        "\$" +
+                                                        "\₹" +
                                                             singleProduct.price,
                                                         style: TextStyle(
                                                           fontSize: 14,
@@ -428,7 +428,7 @@ class _homePageState extends State<homePage> {
                                                             .spaceBetween,
                                                     children: [
                                                       Text(
-                                                        "\$" +
+                                                        "\₹" +
                                                             singleProduct.price,
                                                         style: TextStyle(
                                                           fontSize: 14,

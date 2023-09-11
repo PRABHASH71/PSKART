@@ -97,7 +97,7 @@ class _singleFavouriteState extends State<singleFavourite> {
                           ],
                         ),
                         Text(
-                          "\$" + "${widget.singleProduct.price.toString()}",
+                          "\₹" + "${widget.singleProduct.price.toString()}",
                           style: TextStyle(
                             fontSize: 13.0,
                             fontWeight: FontWeight.bold,

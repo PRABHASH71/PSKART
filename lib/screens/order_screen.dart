@@ -94,7 +94,7 @@ class Order_Screen extends StatelessWidget {
                                             height: 13,
                                           ),
                                           Text(
-                                            "Total Price : \$${orderModel.totalPrice}",
+                                            "Total Price : \₹${orderModel.totalPrice}",
                                             style: TextStyle(
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.bold,
@@ -223,7 +223,7 @@ class Order_Screen extends StatelessWidget {
                                                                 height: 13,
                                                               ),
                                                               Text(
-                                                                "Price : \$${singleproduct.price}",
+                                                                "Price : \₹${singleproduct.price}",
                                                                 style:
                                                                     TextStyle(
                                                                   fontSize:
@@ -301,7 +301,7 @@ class Order_Screen extends StatelessWidget {
                                     padding: const EdgeInsets.only(
                                         left: 8.0, right: 8.0),
                                     child: Text(
-                                      "Total : \$${orderModel.totalPrice}",
+                                      "Total : \₹${orderModel.totalPrice}",
                                       style: TextStyle(
                                         fontSize: 15,
                                       ),
@@ -320,7 +320,7 @@ class Order_Screen extends StatelessWidget {
                               ),
                               ListTile(
                                 title: Text(
-                                    "Total Price : \$${orderModel.totalPrice}"),
+                                    "Total Price : \₹${orderModel.totalPrice}"),
                               ),
                               ListTile(
                                 title: Text("Status : ${orderModel.status}"),

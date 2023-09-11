@@ -48,7 +48,7 @@ class _cartPageState extends State<cartPage> {
                             ),
                           ),
                           Text(
-                            "\$${appProvider.totalPrice().toString()}",
+                            "\₹${appProvider.totalPrice().toString()}",
                             style: TextStyle(
                               color: Colors.blue,
                               fontSize: 18,

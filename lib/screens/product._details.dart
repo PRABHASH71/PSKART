@@ -105,7 +105,7 @@ class _ProductsDetailsState extends State<ProductsDetails> {
             SizedBox(
               height: 20,
               child: Text(
-                "\$" + widget.singleProduct.price,
+                "\₹" + widget.singleProduct.price,
                 style: TextStyle(
                     color: Colors.blue,
                     fontSize: 18,
