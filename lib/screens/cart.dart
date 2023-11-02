@@ -10,6 +10,7 @@ import 'package:pskart/screens/buy_page.dart';
 import 'package:pskart/screens/cartAddress.dart';
 import 'package:pskart/screens/cart_buy_page.dart';
 import 'package:pskart/screens/home/home.dart';
+import 'package:pskart/screens/selectaddress.dart';
 
 class cartPage extends StatefulWidget {
   const cartPage({super.key});
@@ -79,7 +80,11 @@ class _cartPageState extends State<cartPage> {
 
                                   appProvider.clearCart();
                                   Routes.instance.push(
-                                      widget: CartAddressSection(
+                                      // widget: CartAddressSection(
+                                      //   price: x,
+                                      // ),
+                                      // context: context);
+                                      widget: selectAddress(
                                         price: x,
                                       ),
                                       context: context);

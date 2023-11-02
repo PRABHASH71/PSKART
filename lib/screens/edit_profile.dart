@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:pskart/constants/constants.dart';
@@ -28,6 +29,9 @@ class _Edit_ProfileState extends State<Edit_Profile> {
   }
 
   TextEditingController name = TextEditingController();
+  TextEditingController address = TextEditingController();
+  TextEditingController pincode = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     AppProvider appProvider = Provider.of<AppProvider>(
@@ -70,6 +74,30 @@ class _Edit_ProfileState extends State<Edit_Profile> {
             SizedBox(
               height: 12,
             ),
+            TextFormField(
+              controller: address,
+              decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        width: 1, color: Color.fromARGB(83, 84, 84, 84)),
+                  ),
+                  hintText: "Enter Your Address"),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            TextFormField(
+              controller: pincode,
+              decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        width: 1, color: Color.fromARGB(83, 84, 84, 84)),
+                  ),
+                  hintText: "Enter Pincode"),
+            ),
+            SizedBox(
+              height: 12,
+            ),
             Container(
                 height: 45,
                 child: Padding(
@@ -79,8 +107,12 @@ class _Edit_ProfileState extends State<Edit_Profile> {
                         backgroundColor: Colors.red,
                       ),
                       onPressed: () async {
+                        Fluttertoast.showToast(msg: "Updated Successfully");
                         Usermodel usermodel = appProvider.getUserInformation
-                            .copyWith(name: name.text);
+                            .copyWith(
+                                name: name.text,
+                                address: address.text,
+                                pincode: pincode.text);
                         appProvider.updateUserInfoFirebase(
                             context, usermodel, image);
                       },

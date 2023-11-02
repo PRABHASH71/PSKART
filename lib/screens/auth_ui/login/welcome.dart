@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pskart/constants/asset_images.dart';
 import 'package:pskart/constants/routes.dart';
+import 'package:pskart/screens/Admin.dart';
 import 'package:pskart/screens/auth_ui/login/login.dart';
 import 'package:pskart/screens/auth_ui/register/register.dart';
+import 'package:pskart/screens/adminpanel/AddProduct.dart';
 
 class welcome extends StatelessWidget {
   const welcome({super.key});
@@ -66,7 +68,7 @@ class welcome extends StatelessWidget {
                             Routes.instance
                                 .push(widget: Login(), context: context);
                           },
-                          child: Text("Login"))),
+                          child: Text("Users"))),
                 ),
                 SizedBox(
                   height: 30,
@@ -81,9 +83,9 @@ class welcome extends StatelessWidget {
                           ),
                           onPressed: () {
                             Routes.instance
-                                .push(widget: Register(), context: context);
+                                .push(widget: AddProduct(), context: context);
                           },
-                          child: Text("Register"))),
+                          child: Text("Admin"))),
                 ),
               ],
             ),

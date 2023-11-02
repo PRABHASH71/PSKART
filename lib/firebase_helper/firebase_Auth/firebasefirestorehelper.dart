@@ -3,9 +3,11 @@ import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pskart/constants/constants.dart';
 import 'package:pskart/models/orderModel.dart';
 import 'package:pskart/models/product_model.dart';
+import 'package:pskart/models/testModel.dart';
 import 'package:pskart/models/userModel.dart';
 
 class FirebaseFirestoreHelper {
@@ -21,6 +23,20 @@ class FirebaseFirestoreHelper {
           .map((e) => ProductModel.fromJson(e.data()))
           .toList();
       return productModelList;
+    } catch (e) {
+      showMessage(e.toString());
+      return [];
+    }
+  }
+
+  Future<List<TestModel>> gettestProducts() async {
+    try {
+      QuerySnapshot<Map<String, dynamic>> querySnapshot =
+          await _firebaseFirestore.collection("test").get();
+
+      List<TestModel> testModelList =
+          querySnapshot.docs.map((e) => TestModel.fromJson(e.data())).toList();
+      return testModelList;
     } catch (e) {
       showMessage(e.toString());
       return [];
@@ -93,6 +109,30 @@ class FirebaseFirestoreHelper {
     } catch (e) {
       showMessage(e.toString());
       return [];
+    }
+  }
+
+  Future<bool> uploadtryProductFirebase(
+      String name, String price, String description, String image) async {
+    try {
+      DocumentReference documentReference =
+          _firebaseFirestore.collection("categories").doc();
+
+      documentReference.set({
+        "id": documentReference.id,
+        "name": name,
+        "image": image,
+        "price": price,
+        "description": description,
+        "status": "pending",
+      });
+
+      showMessage("ADDED SUCCESSFULLY");
+      return true;
+    } catch (e) {
+      showMessage(e.toString());
+
+      return false;
     }
   }
 }

@@ -11,6 +11,7 @@ import 'package:pskart/screens/buy_page.dart';
 import 'package:pskart/screens/cart.dart';
 import 'package:pskart/screens/favourite_screen.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:pskart/screens/singlecheckkaddress.dart';
 
 class ProductsDetails extends StatefulWidget {
   final ProductModel singleProduct;
@@ -189,7 +190,7 @@ class _ProductsDetailsState extends State<ProductsDetails> {
                         ProductModel productModel =
                             widget.singleProduct.copyWith(qty: qty);
                         Routes.instance.push(
-                            widget: AddressSection(
+                            widget: singleselectAddress(
                                 cart: false,
                                 productModel: productModel,
                                 price:

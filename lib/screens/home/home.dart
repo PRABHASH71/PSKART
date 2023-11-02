@@ -25,6 +25,7 @@ class homePage extends StatefulWidget {
 
 class _homePageState extends State<homePage> {
   bool isLoading = false;
+
   List<ProductModel> productModelList = [];
   @override
   void initState() {

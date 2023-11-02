@@ -118,9 +118,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         title: Text("Your Wishlist"),
                       ),
                       ListTile(
-                        onTap: () {
-                        
-                        },
+                        onTap: () {},
                         leading: Icon(Icons.info_outline),
                         title: Text("About Us"),
                       ),

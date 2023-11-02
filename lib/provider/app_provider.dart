@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pskart/constants/constants.dart';
 import 'package:pskart/firebase_helper/firebase_Auth/firebase_storage.dart';
 import 'package:pskart/models/product_model.dart';
@@ -49,7 +50,6 @@ class AppProvider with ChangeNotifier {
 
   void updateUserInfoFirebase(
       BuildContext context, usermodel, File? file) async {
-    showLoaderDialogue(context);
     if (file == null) {
       await FirebaseFirestore.instance
           .collection("users")
